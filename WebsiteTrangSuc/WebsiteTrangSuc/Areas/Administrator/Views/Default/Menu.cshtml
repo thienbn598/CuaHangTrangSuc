@@ -1,0 +1,108 @@
+﻿
+<nav class="navbar navbar-default">
+
+    <div class="container-fluid">
+        <div>
+         @Html.ActionLink("Quản trị sản phẩm","Index","Default",new  { @class="navbar-brand"})
+          
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hệ thống <pan class="caret"></pan></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @Html.ActionLink("Quản lý người dùng","Index","NguoiDungs")
+                        </li>
+                        <li><a href="#">Sao lưu dữ liệu</a></li>
+                        <li><a href="#">Quản lý Menu</a></li>
+                        <li><a href="#">Quản lý Support</a></li>
+                        <li><a href="#">Quản lý GroupSupport</a></li>
+                        <li><a href="#">Quản lý Visitor</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Thoát</a></li>
+                        <li role="separator" class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quản lý sản phẩm <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @Html.ActionLink("Danh sách sản phẩm","Index","Sanphams")
+                        </li>
+                        <li><a href="#">Thêm sản phẩm mới</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            @Html.ActionLink("Danh sách loại sản phẩm","Index","LoaiSanPhams")
+                        </li>
+                        <li><a href="#">Thêm loại sản phẩm</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            @Html.ActionLink("Danh sách hãng sản xuất","Index","HangSXes")
+                        </li>
+                        <li role="separator" class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quản lý bài viết <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @Html.ActionLink("Danh sách bài viết","Index","BaiVietHeThongs")
+                        </li>
+                        @*<li role="separator" class="divider"></li>*@
+                        <li>
+                            @Html.ActionLink("Danh sách Banner","HienthiBanner","BaiVietHeThongs")
+                        </li>
+                        <li><a href="#">Danh sách Quảng cáo</a></li>
+                        <li><a href="#">Danh sách Media</a></li>
+                        <li></li>
+                        <li role="separator" class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quản lý khách hàng<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Danh sách khách hàng</a></li>
+                    <li role="separator" class="divider"></li>
+                </ul>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quản lý đơn hàng <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        @Html.ActionLink("Đơn hàng - Khách hàng","Index","Donhang_Khachhang")
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        @Html.ActionLink("Chi tiết đơn hàng","Index","Chitietdonhangs")
+                    </li>
+                    <li role="separator" class="divider"></li>
+                </ul>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Xin chào! @{@Session["ten"].ToString();}</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li>
+                            @Html.ActionLink("Đăng xuất","Thoat","Default")
+                        </li>                       
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+   <!-- /.container-fluid -->
+</nav>
